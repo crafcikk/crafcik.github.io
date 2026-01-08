@@ -1,0 +1,644 @@
+        // Tablica z przykładami, każdy z obrazkiem i poprawnymi odpowiedziami oraz punktami
+        const przyklady = [
+            {
+                img: "skriny/1.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Warn",
+                correctCzas: "90d",
+                correctPowód: "Flood",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/2.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            // Dodaj pozostałe 43 przykłady z poprawnymi odpowiedziami i punktami
+            // Przykład dla akceptuj:
+            {
+                img: "skriny/3.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "90d",
+                correctPowód: "Obraza zarządu",
+                punktWypisanie: 1
+            },
+            // Dla odrzuć, pola kara, czas, powod mogą być puste lub ignorowane
+            {
+                img: "skriny/4.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/5.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/6.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Warn",
+                correctCzas: "90d",
+                correctPowód: "Wulgaryzmy",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/7.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "90d",
+                correctPowód: "Reklama",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/8.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Mute",
+                correctCzas: "1h",
+                correctPowód: "Obraza",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/9.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "Perm",
+                correctPowód: "Próba wzbogacenia się",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/10.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Mute",
+                correctCzas: "1h",
+                correctPowód: "Obraza",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/11.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "180d",
+                correctPowód: "Podszywanie się pod administrację",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/12.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "90d",
+                correctPowód: "Wymiana itemów między serwerami",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/13.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Warn",
+                correctCzas: "90d",
+                correctPowód: "Spam",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/14.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/15.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/16.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Warn",
+                correctCzas: "90d",
+                correctPowód: "Capslock",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/17.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/18.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "Perm",
+                correctPowód: "Scam",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/19.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Warn",
+                correctCzas: "90d",
+                correctPowód: "Oznaczanie graczy z wulgarnymi nickami",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/20.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/21.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/22.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "90d",
+                correctPowód: "Stream z innego serwera",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/23.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Mute",
+                correctCzas: "1h",
+                correctPowód: "Obraza",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/24.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "Perm",
+                correctPowód: "Scam",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/25.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/26.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "90d",
+                correctPowód: "Reklama",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/27.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "Perm",
+                correctPowód: "Udostępnianie danych osobowych",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/28.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Warn",
+                correctCzas: "90d",
+                correctPowód: "Wulgaryzmy",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/29.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "90d",
+                correctPowód: "Stream z innego serwera",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/30.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Mute",
+                correctCzas: "1h",
+                correctPowód: "Obraza",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/31.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/32.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Warn",
+                correctCzas: "90d",
+                correctPowód: "Flood",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/33.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "Perm",
+                correctPowód: "Próba wzbogacenia się",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/34.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "Perm",
+                correctPowód: "Scam",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/35.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/36.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/37.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "90d",
+                correctPowód: "Oglądanie YT powyżej 4 osób",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/38.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Warn",
+                correctCzas: "90d",
+                correctPowód: "Spam",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/39.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/40.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "Perm",
+                correctPowód: "Wyciek",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/41.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Mute",
+                correctCzas: "1-24h",
+                correctPowód: "Obraza adm",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/42.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Warn",
+                correctCzas: "90d",
+                correctPowód: "Oznaczanie graczy z wulgarnymi nickami",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/43.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "akceptuj",
+                punktChoice: 1,
+                dodatkowyPunkt: true,
+                correctKara: "Ban",
+                correctCzas: "Perm",
+                correctPowód: "Scam",
+                punktWypisanie: 1
+            },
+            {
+                img: "skriny/44.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            },
+            {
+                img: "skriny/45.jpg",
+                zwykłyPunkt: true,
+                correctChoice: "odrzuć",
+                punktChoice: 1,
+                dodatkowyPunkt: false,
+                correctKara: "",
+                correctCzas: "",
+                correctPowód: "",
+                punktWypisanie: 0
+            }
+            // Kontynuuj dla wszystkich 45...
+            // Tutaj tylko 4 przykłady dla demonstracji, dodaj resztę
+        ];
+
+        // Funkcja do losowania unikalnych indeksów
+        function losujIndeksy(liczba, max) {
+            const indeksy = [];
+            const rzeczywistaLiczba = Math.min(liczba, max);
+            while (indeksy.length < rzeczywistaLiczba) {
+                const rand = Math.floor(Math.random() * max);
+                if (!indeksy.includes(rand)) {
+                    indeksy.push(rand);
+                }
+            }
+            return indeksy;
+        }
+
+        // Wybierz losowe przykłady
+        const wybraneIndeksy = losujIndeksy(10, przyklady.length);
+        const wybranePrzyklady = wybraneIndeksy.map(i => przyklady[i]);
+
+        // Oblicz całkowitą liczbę możliwych punktów
+        let totalPossible = 0;
+        wybranePrzyklady.forEach(przyklad => {
+            if (przyklad.zwykłyPunkt) totalPossible += przyklad.punktChoice;
+            if (przyklad.dodatkowyPunkt) totalPossible += przyklad.punktWypisanie;
+        });
+
+        // Kontener na test
+        const container = document.getElementById('test-container');
+
+        // Dla każdego wybranego przykładu utwórz sekcję
+        wybranePrzyklady.forEach((przyklad, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.innerHTML = `
+                <h3>Pytanie ${index + 1}:</h3>
+                <div class="question-content">
+                    <img src="${przyklad.img}" alt="Przykład ${index + 1}" style="max-width: 400px; height: auto;">
+                    <div class="options">
+                        <label for="akceptuj${index}" class="accept-label">Akceptuj</label>
+                        <input type="radio" value="akceptuj" id="akceptuj${index}" class="potwierdzenie" name="potwierdzenie${index}">
+                        <br>
+                        <label for="odrzuć${index}" class="reject-label">Odrzuć</label>
+                        <input type="radio" value="odrzuć" id="odrzuć${index}" class="potwierdzenie" name="potwierdzenie${index}">
+
+                        <div id="dodatkowe-pola${index}" style="display: none;">
+                            <label for="kara${index}">Kara:</label>
+                            <input type="text" id="kara${index}" name="kara${index}"><br>
+                            <label for="czas${index}">Czas:</label>
+                            <input type="text" id="czas${index}" name="czas${index}"><br>
+                            <label for="powod${index}">Powód:</label>
+                            <input type="text" id="powod${index}" name="powod${index}"><br>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            `;
+            container.appendChild(questionDiv);
+
+            // Dodaj event listenery
+            document.getElementById(`akceptuj${index}`).addEventListener('change', function() {
+                const dodatkowePola = document.getElementById(`dodatkowe-pola${index}`);
+                if (this.checked) {
+                    dodatkowePola.style.display = 'block';
+                } else {
+                    dodatkowePola.style.display = 'none';
+                }
+            });
+
+            document.getElementById(`odrzuć${index}`).addEventListener('change', function() {
+                const dodatkowePola = document.getElementById(`dodatkowe-pola${index}`);
+                dodatkowePola.style.display = 'none';
+            });
+        });
+
+        // Obsługa zakończenia testu
+        document.getElementById('zakoncz-test').addEventListener('click', function() {
+            const wynikiDiv = document.getElementById('wyniki');
+            wynikiDiv.innerHTML = '<h2>Błędne odpowiedzi:</h2>';
+            let bledne = [];
+            let earned = 0;
+
+            wybranePrzyklady.forEach((przyklad, index) => {
+                const selectedChoice = document.querySelector(`input[name="potwierdzenie${index}"]:checked`);
+                const choiceValue = selectedChoice ? selectedChoice.value : null;
+
+                let choiceCorrect = choiceValue === przyklad.correctChoice;
+                let writingCorrect = true;
+
+                if (choiceValue === 'akceptuj') {
+                    const kara = document.getElementById(`kara${index}`).value.trim();
+                    const czas = document.getElementById(`czas${index}`).value.trim();
+                    const powod = document.getElementById(`powod${index}`).value.trim();
+                    writingCorrect = kara === przyklad.correctKara && czas === przyklad.correctCzas && powod === przyklad.correctPowód;
+                }
+
+                // Dodaj punkty
+                if (choiceCorrect && przyklad.zwykłyPunkt) earned += przyklad.punktChoice;
+                if (choiceValue === 'akceptuj' && writingCorrect && przyklad.dodatkowyPunkt) earned += przyklad.punktWypisanie;
+
+                let isCorrect = choiceCorrect && (choiceValue !== 'akceptuj' || writingCorrect);
+
+                if (!isCorrect) {
+                    let msg = `Pytanie ${index + 1}: `;
+                    if (choiceValue === null) {
+                        msg += `Nie wybrano odpowiedzi. Poprawna: ${przyklad.correctChoice}`;
+                        if (przyklad.correctChoice === 'akceptuj') {
+                            msg += `, Kara: ${przyklad.correctKara}, Czas: ${przyklad.correctCzas}, Powód: ${przyklad.correctPowód}`;
+                        }
+                    } else {
+                        msg += `Wybrano: ${choiceValue}`;
+                        if (choiceValue === 'akceptuj') {
+                            const kara = document.getElementById(`kara${index}`).value.trim();
+                            const czas = document.getElementById(`czas${index}`).value.trim();
+                            const powod = document.getElementById(`powod${index}`).value.trim();
+                            msg += `, Kara: ${kara}, Czas: ${czas}, Powód: ${powod}`;
+                        }
+                        msg += `. Poprawna: ${przyklad.correctChoice}`;
+                        if (przyklad.correctChoice === 'akceptuj') {
+                            msg += `, Kara: ${przyklad.correctKara}, Czas: ${przyklad.correctCzas}, Powód: ${przyklad.correctPowód}`;
+                        }
+                    }
+                    bledne.push(msg);
+                }
+            });
+
+            if (bledne.length === 0) {
+                wynikiDiv.innerHTML += '<p>Wszystkie odpowiedzi są poprawne!</p>';
+            } else {
+                // Sortuj błędne odpowiedzi po numerze pytania
+                bledne.sort((a, b) => {
+                    const numA = parseInt(a.match(/Pytanie (\d+):/)[1]);
+                    const numB = parseInt(b.match(/Pytanie (\d+):/)[1]);
+                    return numA - numB;
+                });
+                wynikiDiv.innerHTML += '<ul>' + bledne.map(b => `<li>${b}</li>`).join('') + '</ul>';
+            }
+
+            // Dodaj wynik punktowy
+            const percentage = totalPossible > 0 ? (earned / totalPossible) * 100 : 0;
+            wynikiDiv.innerHTML += `<p><strong>Wynik: ${earned} / ${totalPossible} punktów (${percentage.toFixed(2)}%)</strong></p>`;
+
+            wynikiDiv.style.display = 'block';
+        });
